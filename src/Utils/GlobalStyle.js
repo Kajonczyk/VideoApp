@@ -9,4 +9,8 @@ body{
 }
 *, *::before, *::after{
     box-sizing:border-box;
-}`;
+}
+p{
+    margin: 0px;
+}
+`;

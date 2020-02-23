@@ -5,7 +5,6 @@ export const MovieContext = React.createContext();
 
 export class Provider extends Component {
   state = {
-    name: "",
     movieList: []
   };
   addMovie = async payload => {

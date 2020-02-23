@@ -8,10 +8,11 @@ export const Home = () => {
     <div>
       <Header />
       <Provider>
-        <Input />
+        <>
+          <Input />
+          <MovieFrames />
+        </>
       </Provider>
-
-      <MovieFrames />
     </div>
   );
 };
