@@ -11,6 +11,9 @@ export const StyledInput = styled.input`
   font-family: ${({ theme }) => theme.font.family.Didact};
   color: ${({ theme }) => theme.colorSecondary};
   font-size: ${({ theme }) => theme.font.size.xs};
+  &::placeholder {
+    color: inherit;
+  }
 `;
 export const StyledWrapper = styled.div`
   text-align: center;

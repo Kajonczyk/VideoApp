@@ -1,10 +1,10 @@
 import React from "react";
 import { StyledHeading } from "./HeaderStyles";
 
-export const Header = () => {
+export const Header = ({ text }) => {
   return (
     <div>
-      <StyledHeading>YouVid</StyledHeading>
+      <StyledHeading>{text}</StyledHeading>
     </div>
   );
 };

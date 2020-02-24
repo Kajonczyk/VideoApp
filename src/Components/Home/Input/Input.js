@@ -4,7 +4,7 @@ import { MovieContext } from "../../../moviesContext";
 
 export class Input extends Component {
   state = {
-    value: ""
+    value: "https://www.youtube.com/watch?v=lSAz2ONC1rk"
   };
   handleChange = e => {
     const { value } = e.target;
@@ -12,15 +12,30 @@ export class Input extends Component {
       value
     });
   };
+  clearInput = () => {
+    this.setState({
+      value: ""
+    });
+  };
   render() {
     const { value } = this.state;
     return (
       <div>
-        <StyledInput type="text" value={value} onChange={this.handleChange} />
+        <StyledInput
+          type="text"
+          value={value}
+          onChange={this.handleChange}
+          placeholder="Add movie"
+        />
         <MovieContext.Consumer>
           {context => (
             <StyledWrapper>
-              <StyledButton onClick={() => context.addMovie(value)}>
+              <StyledButton
+                onClick={() => {
+                  context.addMovie(value);
+                  this.clearInput();
+                }}
+              >
                 Add Movie
               </StyledButton>
             </StyledWrapper>
