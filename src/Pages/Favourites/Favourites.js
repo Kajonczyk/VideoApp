@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { Header } from "../../Shared/Header/Header";
 import { SingleFrame } from "../../Components/Home/MovieFrames/SingleFrame";
-import { MovieContext } from "../../moviesContext";
+import { MovieContext, Provider } from "../../moviesContext";
+import { Navbar } from "../../Components/Navigation/Navbar";
 export class Favourites extends Component {
   state = {};
   render() {
     return (
-      <div>
+      <>
+        <Navbar />
         <Header text="Favourites">Favourites</Header>
         <MovieContext.Consumer>
           {context =>
@@ -24,7 +26,7 @@ export class Favourites extends Component {
               ))
           }
         </MovieContext.Consumer>
-      </div>
+      </>
     );
   }
 }
