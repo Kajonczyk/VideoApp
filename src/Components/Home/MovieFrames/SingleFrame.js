@@ -6,9 +6,11 @@ import {
   MenuButton,
   StatisticsWrapper
 } from "./SingleFrameStyles";
+import { Modal } from "../../../Shared/Modal/Modal";
 import { FrameMenu } from "./FrameMenu";
-export const SingleFrame = ({ id, thumbnail, title, views, likes }) => {
+export const SingleFrame = ({ id, thumbnail, title, views, likes, url }) => {
   const [isMenuActive, toggleMenu] = useState(false);
+  const [isModalActive, toggleModal] = useState(false);
 
   const trimTitle = title => title.substr(0, 23) + "..";
 
@@ -30,7 +32,7 @@ export const SingleFrame = ({ id, thumbnail, title, views, likes }) => {
   const trimmedLikes = trimStatistics(likes);
   return (
     <div>
-      <StyledFrame>
+      <StyledFrame onClick={() => toggleModal(!isModalActive)}>
         <div>
           <ThumbnailImg src={thumbnail} alt="asd" />
         </div>
@@ -42,6 +44,9 @@ export const SingleFrame = ({ id, thumbnail, title, views, likes }) => {
         </StatisticsWrapper>
         {isMenuActive && <FrameMenu id={id} />}
       </StyledFrame>
+      {isModalActive && (
+        <Modal url={url} closeModal={() => toggleModal(!isModalActive)} />
+      )}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledWrapper = styled.div`
   height: 30px;
   background-color: ${({ theme }) => theme.colorPrimary};
-  z-index: 9999;
+  z-index: 7777;
 `;
 export const HamburgerWrapper = styled.div`
   margin: 10px 20px 0px auto;
@@ -20,7 +20,7 @@ export const StyledSpan = styled.span`
   margin: 2px 0px;
   transition: transform 0.2s;
   border-radius: 5px;
-  z-index: 9999;
+  z-index: 7777;
   background-color: ${({ theme }) => theme.colorSecondary};
   ${({ active, theme }) =>
     active &&
@@ -53,7 +53,7 @@ export const MenuWrapper = styled.div`
   align-items: flex-end;
   flex-direction: column;
   padding-top: 100px;
-  z-index: 9999;
+  z-index: 7777;
 
   ${({ active }) =>
     active &&
@@ -69,4 +69,10 @@ export const MenuLink = styled.p`
   text-decoration: underline;
   font-size: ${({ theme }) => theme.font.size.s};
   font-family: ${({ theme }) => theme.font.family.Didact};
+  display: none;
+  ${({ active }) =>
+    active &&
+    `
+    display:block;
+  `}
 `;

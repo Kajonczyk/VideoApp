@@ -8,9 +8,24 @@ export class Provider extends Component {
     movieList: [],
     id: 0
   };
+
+  getVideoCode = code => {
+    if (code.includes("www.youtube.com")) {
+      return code.split("v=")[1];
+    }
+    return code;
+  };
   addMovie = async payload => {
     const response = await getMovie(payload);
-    const newVideo = { ...response, favourite: false, id: this.state.id };
+    const videoCode = this.getVideoCode(payload);
+
+    const newVideo = {
+      ...response,
+      favourite: false,
+      id: this.state.id,
+      url: videoCode
+    };
+
     this.setState({
       movieList: [...this.state.movieList, newVideo],
       id: this.state.id + 1

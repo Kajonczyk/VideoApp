@@ -27,4 +27,5 @@ export const StyledButton = styled.button`
   color: ${({ theme }) => theme.colorSecondary};
   font-family: ${({ theme }) => theme.font.family.Didact};
   font-size: ${({ theme }) => theme.font.size.xs};
+  margin-bottom: 20px;
 `;

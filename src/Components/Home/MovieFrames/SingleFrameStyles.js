@@ -2,14 +2,16 @@ import styled from "styled-components";
 
 export const StyledFrame = styled.div`
   border: 2px solid ${({ theme }) => theme.colorSecondary};
-  width: 260px;
+  min-width: 260px;
+  width: 60%;
+  max-width: 350px;
   margin: 20px auto;
   color: ${({ theme }) => theme.colorSecondary};
   position: relative;
 `;
 
 export const ThumbnailImg = styled.img`
-  height: 150px;
+  height: 100%;
   width: 100%;
 `;
 export const MovieText = styled.p`
@@ -34,7 +36,7 @@ export const MenuButton = styled.button`
   font-weight: bold;
   color: inherit;
   position: relative;
-  z-index: 9999;
+  z-index: 7777;
   font-size: calc(${({ theme }) => theme.font.size.xs} * 1.1);
   outline: none;
 `;

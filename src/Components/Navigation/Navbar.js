@@ -14,8 +14,13 @@ export const Navbar = () => {
   return (
     <>
       <MenuWrapper active={isMenuActive}>
-        <MenuLink onClick={() => changeRoute("/")}>Home</MenuLink>
-        <MenuLink onClick={() => changeRoute("/favourites")}>
+        <MenuLink active={isMenuActive} onClick={() => changeRoute("/")}>
+          Home
+        </MenuLink>
+        <MenuLink
+          active={isMenuActive}
+          onClick={() => changeRoute("/favourites")}
+        >
           Favourites
         </MenuLink>
       </MenuWrapper>

@@ -15,6 +15,7 @@ export class MovieFrames extends Component {
                 title={item.snippet.title}
                 views={item.statistics.viewCount}
                 likes={item.statistics.likeCount}
+                url={item.url}
               />
             ))}
           </div>
