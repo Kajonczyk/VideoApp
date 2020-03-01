@@ -7,17 +7,20 @@ export const StyledWrapper = styled.div`
 `;
 export const HamburgerWrapper = styled.div`
   margin: 10px 20px 0px auto;
-  height: 30px;
+  height: 40px;
   width: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-top: 9x;
+  cursor: pointer;
+  z-index: 8888;
+  position: relative;
 `;
 export const StyledSpan = styled.span`
   height: 3px;
   width: 20px;
-  margin: 2px 0px;
+  margin: 3px 0px;
   transition: transform 0.2s;
   border-radius: 5px;
   z-index: 7777;
@@ -30,13 +33,13 @@ export const StyledSpan = styled.span`
       background-color: ${theme.colorPrimary};
     }
   &:nth-child(1){
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(6.9px, 7px);
   }
   &:nth-child(2){
     transform: rotateY(90deg);
   }
   &:nth-child(3){
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(6px, -6px);
   }
   `}
 `;
@@ -70,6 +73,7 @@ export const MenuLink = styled.p`
   font-size: ${({ theme }) => theme.font.size.s};
   font-family: ${({ theme }) => theme.font.family.Didact};
   display: none;
+  cursor: pointer;
   ${({ active }) =>
     active &&
     `

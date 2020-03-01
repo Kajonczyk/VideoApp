@@ -14,6 +14,9 @@ export const StyledInput = styled.input`
   &::placeholder {
     color: inherit;
   }
+  ${({ theme }) => theme.mq.tablet} {
+    width: 50%;
+  }
 `;
 export const StyledWrapper = styled.div`
   text-align: center;

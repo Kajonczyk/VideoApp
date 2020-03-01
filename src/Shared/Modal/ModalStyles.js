@@ -14,7 +14,7 @@ export const CloseWrapper = styled.button`
   right: 0;
   margin: 20px;
   border: none;
-  background: none;
+  background-color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
 `;
 export const StyledSpan = styled.span`

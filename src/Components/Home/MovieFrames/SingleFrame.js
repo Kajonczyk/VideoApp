@@ -30,11 +30,16 @@ export const SingleFrame = ({ id, thumbnail, title, views, likes, url }) => {
   const trimmedTitle = trimTitle(title);
   const trimmedViews = trimStatistics(views);
   const trimmedLikes = trimStatistics(likes);
+
   return (
     <div>
-      <StyledFrame onClick={() => toggleModal(!isModalActive)}>
+      <StyledFrame>
         <div>
-          <ThumbnailImg src={thumbnail} alt="asd" />
+          <ThumbnailImg
+            src={thumbnail}
+            alt="asd"
+            onClick={() => toggleModal(!isModalActive)}
+          />
         </div>
         <MovieText>{trimmedTitle}</MovieText>
         <StatisticsWrapper>

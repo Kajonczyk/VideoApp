@@ -8,6 +8,8 @@ export const StyledFrame = styled.div`
   margin: 20px auto;
   color: ${({ theme }) => theme.colorSecondary};
   position: relative;
+  flex-grow: 1;
+  flex: 1 1 50%;
 `;
 
 export const ThumbnailImg = styled.img`
