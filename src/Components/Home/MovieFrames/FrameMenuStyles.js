@@ -15,4 +15,5 @@ export const StyledText = styled.p`
   display: inline;
   line-height: 28px;
   font-size: ${({ theme }) => theme.font.size.xs};
+  cursor: pointer;
 `;

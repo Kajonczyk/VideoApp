@@ -8,6 +8,8 @@ export const StyledFrame = styled.div`
   margin: 20px auto;
   color: ${({ theme }) => theme.colorSecondary};
   position: relative;
+  flex-grow: 1;
+  flex: 1 1 50%;
 `;
 
 export const ThumbnailImg = styled.img`
@@ -39,6 +41,7 @@ export const MenuButton = styled.button`
   z-index: 7777;
   font-size: calc(${({ theme }) => theme.font.size.xs} * 1.1);
   outline: none;
+  cursor: pointer;
 `;
 export const StatisticsWrapper = styled.div`
   display: flex;

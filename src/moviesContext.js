@@ -6,7 +6,8 @@ export const MovieContext = React.createContext();
 export class Provider extends Component {
   state = {
     movieList: [],
-    id: 0
+    id: 0,
+    inputError: false
   };
 
   getVideoCode = code => {
@@ -15,35 +16,43 @@ export class Provider extends Component {
     }
     return code;
   };
+  displayError = () => {};
   addMovie = async payload => {
     const response = await getMovie(payload);
     const videoCode = this.getVideoCode(payload);
+    if (response) {
+      const newVideo = {
+        ...response,
+        favourite: false,
+        id: this.state.id,
+        url: videoCode
+      };
 
-    const newVideo = {
-      ...response,
-      favourite: false,
-      id: this.state.id,
-      url: videoCode
-    };
-
+      this.setState({
+        movieList: [...this.state.movieList, newVideo],
+        id: this.state.id + 1,
+        inputError: false
+      });
+      return;
+    }
     this.setState({
-      movieList: [...this.state.movieList, newVideo],
-      id: this.state.id + 1
+      inputError: true
+    });
+  };
+  setMovieList = arr => {
+    this.setState({
+      movieList: arr
     });
   };
   setFavourite = index => {
     const arr = [...this.state.movieList];
     arr[index].favourite = true;
-    this.setState({
-      movieList: arr
-    });
+    this.setMovieList(arr);
   };
   deleteItem = index => {
     const arr = [...this.state.movieList];
     arr.splice(index, 1);
-    this.setState({
-      movieList: arr
-    });
+    this.setMovieList(arr);
   };
   render() {
     return (

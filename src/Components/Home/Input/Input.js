@@ -1,8 +1,12 @@
 import React, { Component } from "react";
-import { StyledInput, StyledWrapper, StyledButton } from "./InputStyles";
-import { MovieContext } from "../../../moviesContext";
-
-export class Input extends Component {
+import {
+  StyledInput,
+  StyledWrapper,
+  StyledButton,
+  InputError
+} from "./InputStyles";
+import withContext from "../../../Helpers/withContext";
+class Input extends Component {
   state = {
     value: "https://www.youtube.com/watch?v=lSAz2ONC1rk"
   };
@@ -17,8 +21,15 @@ export class Input extends Component {
       value: ""
     });
   };
+
   render() {
     const { value } = this.state;
+    const {
+      context,
+      context: {
+        state: { inputError }
+      }
+    } = this.props;
     return (
       <div>
         <StyledInput
@@ -27,21 +38,20 @@ export class Input extends Component {
           onChange={this.handleChange}
           placeholder="Add movie"
         />
-        <MovieContext.Consumer>
-          {context => (
-            <StyledWrapper>
-              <StyledButton
-                onClick={() => {
-                  context.addMovie(value);
-                  this.clearInput();
-                }}
-              >
-                Add Movie
-              </StyledButton>
-            </StyledWrapper>
-          )}
-        </MovieContext.Consumer>
+
+        {inputError && <InputError>Input valid video link</InputError>}
+        <StyledWrapper>
+          <StyledButton
+            onClick={() => {
+              context.addMovie(value);
+              this.clearInput();
+            }}
+          >
+            Add Movie
+          </StyledButton>
+        </StyledWrapper>
       </div>
     );
   }
 }
+export default withContext(Input);
