@@ -31,4 +31,11 @@ export const StyledButton = styled.button`
   font-family: ${({ theme }) => theme.font.family.Didact};
   font-size: ${({ theme }) => theme.font.size.xs};
   margin-bottom: 20px;
+  cursor: pointer;
+`;
+export const InputError = styled.p`
+  color: red;
+  font-size: ${({ theme }) => theme.font.size.xs};
+  text-align: center;
+  font-family: ${({ theme }) => theme.font.family.Didact};
 `;

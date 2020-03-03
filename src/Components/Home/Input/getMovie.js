@@ -7,6 +7,8 @@ export const getMovie = async videoCode => {
       method: "GET"
     }
   );
-  const data = await response.json();
-  return data.items[0];
+  if (response.ok) {
+    const data = await response.json();
+    return data.items[0];
+  }
 };

@@ -7,6 +7,12 @@ export const MenuWrapper = styled.div`
     display: flex;
     margin: 0px auto;
     justify-content: center;
+    ${({ margin }) =>
+      margin &&
+      `
+    margin-top:50px;
+
+   `}
   }
 `;
 export const TileIcon = styled(ViewTile)`

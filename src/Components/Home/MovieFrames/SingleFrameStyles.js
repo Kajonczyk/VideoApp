@@ -41,6 +41,7 @@ export const MenuButton = styled.button`
   z-index: 7777;
   font-size: calc(${({ theme }) => theme.font.size.xs} * 1.1);
   outline: none;
+  cursor: pointer;
 `;
 export const StatisticsWrapper = styled.div`
   display: flex;
