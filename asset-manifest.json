@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/VideoApp/static/js/main.657dc6f5.chunk.js",
-    "main.js.map": "/VideoApp/static/js/main.657dc6f5.chunk.js.map",
+    "main.js": "/VideoApp/static/js/main.ce473816.chunk.js",
+    "main.js.map": "/VideoApp/static/js/main.ce473816.chunk.js.map",
     "runtime-main.js": "/VideoApp/static/js/runtime-main.01b61782.js",
     "runtime-main.js.map": "/VideoApp/static/js/runtime-main.01b61782.js.map",
-    "static/js/2.54acffb2.chunk.js": "/VideoApp/static/js/2.54acffb2.chunk.js",
-    "static/js/2.54acffb2.chunk.js.map": "/VideoApp/static/js/2.54acffb2.chunk.js.map",
+    "static/js/2.a8ce7ec6.chunk.js": "/VideoApp/static/js/2.a8ce7ec6.chunk.js",
+    "static/js/2.a8ce7ec6.chunk.js.map": "/VideoApp/static/js/2.a8ce7ec6.chunk.js.map",
     "index.html": "/VideoApp/index.html",
-    "precache-manifest.4d19ba76b0092dc8964fabf9179e95e7.js": "/VideoApp/precache-manifest.4d19ba76b0092dc8964fabf9179e95e7.js",
+    "precache-manifest.1d326837a353dddd8156eed2505dfcc6.js": "/VideoApp/precache-manifest.1d326837a353dddd8156eed2505dfcc6.js",
     "service-worker.js": "/VideoApp/service-worker.js",
-    "static/js/2.54acffb2.chunk.js.LICENSE.txt": "/VideoApp/static/js/2.54acffb2.chunk.js.LICENSE.txt"
+    "static/js/2.a8ce7ec6.chunk.js.LICENSE.txt": "/VideoApp/static/js/2.a8ce7ec6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.01b61782.js",
-    "static/js/2.54acffb2.chunk.js",
-    "static/js/main.657dc6f5.chunk.js"
+    "static/js/2.a8ce7ec6.chunk.js",
+    "static/js/main.ce473816.chunk.js"
   ]
 }
