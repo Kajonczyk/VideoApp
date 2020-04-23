@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/VideoApp/static/js/main.e9b6542a.chunk.js",
+    "main.js.map": "/VideoApp/static/js/main.e9b6542a.chunk.js.map",
+    "runtime-main.js": "/VideoApp/static/js/runtime-main.01b61782.js",
+    "runtime-main.js.map": "/VideoApp/static/js/runtime-main.01b61782.js.map",
+    "static/js/2.34063505.chunk.js": "/VideoApp/static/js/2.34063505.chunk.js",
+    "static/js/2.34063505.chunk.js.map": "/VideoApp/static/js/2.34063505.chunk.js.map",
+    "index.html": "/VideoApp/index.html",
+    "precache-manifest.57145126212c8e1a24796f7d9c5abc33.js": "/VideoApp/precache-manifest.57145126212c8e1a24796f7d9c5abc33.js",
+    "service-worker.js": "/VideoApp/service-worker.js",
+    "static/js/2.34063505.chunk.js.LICENSE.txt": "/VideoApp/static/js/2.34063505.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.01b61782.js",
+    "static/js/2.34063505.chunk.js",
+    "static/js/main.e9b6542a.chunk.js"
+  ]
+}
